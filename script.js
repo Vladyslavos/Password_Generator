@@ -1,26 +1,27 @@
-function generate(){
+function generate() {
 
 	let password = "";
 
-	let length =+ document.getElementById('length').value;
+	let length = +document.getElementById('length').value;
 
 	let lowerCase = document.getElementById('lowercase').checked;
 
 	let upperCase = document.getElementById('uppercase').checked;
 
 	let symbol = document.getElementById('symbols').checked;
-
+	
 	let number = document.getElementById('numbers').cheked;
 
-	if (lowerCase + upperCase + symbol + number <=0) 
-		return
+	if (lowerCase + upperCase + symbol + number <= 0) 
+		return;
 
 	for(let i = 0; i < length; i++){
-		const r = generater(0, 3)
+
+		const r = generater(0, 3);
 		if (lowerCase && r === 0) {
 			password += generateRandomLowerCase();
 		} else if (upperCase && r === 1) {
-			password += generateRandomUpperrCase();
+			password += generateRandomUpperCase();
 		} else if (symbol && r === 2) {
 			password += generateRandomSymbol();
 		} else if (number && r === 3) {
@@ -44,9 +45,6 @@ function generate(){
 		const symbol = "!@#$%^&*(){}<>?";
 		return symbols[generater(0, symbols.length - 1)];
 	}
-	function generater(){
-		return Math.floor(Math.random() * (max + 1 - min) + min)
+	function generater(min = 0, max = 1){
+		return Math.floor(Math.random() * (max + 1 - min) + min);
 	}
-
-
-
