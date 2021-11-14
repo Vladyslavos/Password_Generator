@@ -9,7 +9,7 @@ function generate() {
 	let upperCase = document.getElementById('uppercase').checked;
 
 	let symbol = document.getElementById('symbols').checked;
-	
+
 	let number = document.getElementById('numbers').cheked;
 
 	if (lowerCase + upperCase + symbol + number <= 0) 
@@ -42,7 +42,7 @@ function generate() {
 		return String.fromCharCode(generater(65, 90));
 	}
 	function generateRandomSymbol() {
-		const symbol = "!@#$%^&*(){}<>?";
+		const symbols = "!@#$%^&*(){}<>?";
 		return symbols[generater(0, symbols.length - 1)];
 	}
 	function generater(min = 0, max = 1){
