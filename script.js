@@ -14,6 +14,7 @@ function generate() {
 
 	if (lowerCase + upperCase + symbol + number <= 0) 
 		return;
+	if (length >= 22) {alert('Its better to choose a password up to 20 characters')}
 
 	for(let i = 0; i < length; i++){
 
@@ -48,3 +49,17 @@ function generate() {
 	function generater(min = 0, max = 1){
 		return Math.floor(Math.random() * (max + 1 - min) + min);
 	}
+
+
+
+
+	let result = document.getElementById('result');
+
+	let copy = document.getElementById('copy');
+
+	function copyResult() {
+      navigator.clipboard.writeText(result.textContent)
+                .then(() => console.log('Done'))
+                .catch((err) => console.log(err))
+    alert("You copied this password: " + result.textContent);
+  }

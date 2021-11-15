@@ -29,8 +29,8 @@ h1{
 	background-color: #494552;
 	color: #ffff;
 	border-radius: 4px;
-	height: 28px;
-	font-size: 18px;
+	height: 25px;
+	font-size: 17px;
 }
 .option{
 	margin-top: 10px;
@@ -39,6 +39,11 @@ h1{
 .option input{
 	float: right;
 	border-radius: 3px;
+}
+.result{
+	display: grid;
+	grid-template-columns: 4fr 1fr;
+	column-gap: 20px;
 }
 #generate {
     background-color: #494552;
