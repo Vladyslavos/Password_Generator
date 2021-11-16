@@ -1,16 +1,13 @@
 function generate() {
 
-	let password = "";
+	let password = "",
+        length = +document.getElementById('length').value;
 
-	let length = +document.getElementById('length').value;
 
-	let lowerCase = document.getElementById('lowercase').checked;
-
-	let upperCase = document.getElementById('uppercase').checked;
-
-	let symbol = document.getElementById('symbols').checked;
-
-	let number = document.getElementById('numbers').cheked;
+	let lowerCase = document.getElementById('lowercase').checked,
+        upperCase = document.getElementById('uppercase').checked,
+        symbol = document.getElementById('symbols').checked,
+        number = document.getElementById('numbers').cheked;
 
 	if (lowerCase + upperCase + symbol + number <= 0) 
 		return;
@@ -53,9 +50,8 @@ function generate() {
 
 
 
-	let result = document.getElementById('result');
-
-	let copy = document.getElementById('copy');
+	let result = document.getElementById('result'),
+	    copy = document.getElementById('copy');
 
 	function copyResult() {
       navigator.clipboard.writeText(result.textContent)
